@@ -1,0 +1,9 @@
+To find the intial password for jenkins run the following command"
+
+The user name is admin
+
+```
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
+``` 
+

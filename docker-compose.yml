@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  jenkins:
+    container_name: jenkins
+    networks:
+      - jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    image: jenkins/jenkins:lts
+
+networks:
+  jenkins:  # Remove the 'external' specification here
+
+volumes:
+  jenkins_home:  # Remove the 'external' specification here
